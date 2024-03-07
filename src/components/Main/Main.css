@@ -193,6 +193,7 @@
   0% {
     background-position: -800px 0px;
   }
+
   100% {
     background-position: 800px 0px;
   }
@@ -205,100 +206,128 @@
   line-height: 1.8;
 }
 
-/* Media query for smaller screens */
-  /* @media (max-width: 600px) {
-  .main-bottom input {
-    flex: none;
-    width: 150px;
-  }
-  .main-bottom img {
-    width: 20px;
-  }
-  .search-box {
-    padding: 5px 10px;
-  }
-  .search-box div {
-    gap: 5px;
-  }
-}   */
 
-/* new */
-/* Media query for smaller screens */
- @media (max-width: 768px) {
-  .main .greet {
-    font-size: 32px;
-  }
+/***********************new*********************/
+
+@media (max-width: 600px) {
   .main .cards {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    /* Adjust column width as needed */
+    gap: 10px;
+    /* Adjust gap between cards */
   }
+
   .main .card {
-    height: 150px;
-    padding: 8px;
+    height: 100px;
+    /* Adjust card height */
+    padding: 5px;
+    /* Adjust padding */
   }
+
   .main .card img {
     width: 25px;
-    padding: 4px;
-    bottom: 6px;
-    right: 6px;
+    /* Adjust image size */
+    bottom: 3px;
+    /* Adjust image positioning */
+    right: 3px;
+    /* Adjust image positioning */
   }
-  .search-box input {
-    font-size: 14px;
-  }
-} 
 
-/* Media query for medium-sized screens */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .main .nav {
-    font-size: 20px;
-    padding: 18px;
+  .main .card p {
+    font-size: 12px;
+    /* Adjust font size */
   }
+
   .main .greet {
-    font-size: 48px;
-    padding: 18px;
+    font-size: 24px;
+    /* Adjust greeting font size */
   }
+
+  .search-box input {
+    font-size: 12px;
+    /* Adjust input font size */
+    padding: 3px;
+    /* Adjust input padding */
+  }
+
+  .main-bottom {
+    padding: 0px 5px;
+    /* Adjust bottom section padding */
+  }
+
+  .search-box {
+    padding: 5px;
+    /* Adjust search box padding */
+    margin-top: 10px;
+    /* Adjust margin top */
+  }
+}
+
+
+
+/*****************************************************/
+/* Media query for medium screens */
+@media(max-width: 1024px) {
+  .main .cards {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
   .main .card {
-    height: 170px;
+    height: 180px;
     padding: 12px;
   }
-  .main .card img {
-    width: 28px;
-    padding: 5px;
-    bottom: 8px;
-    right: 8px;
-  }
-}
 
-/* Media query for 1024 x 600 resolution */
-@media (max-width: 1024px) and (max-height: 600px) {
-  .main .nav {
-    font-size: 18px;
-    padding: 15px;
+  .main .card img {
+    width: 32px;
+    bottom: 7px;
+    right: 7px;
   }
+
+  .main .card p {
+    font-size: 16px;
+  }
+
   .main .greet {
-    font-size: 36px;
-    padding: 15px;
+    font-size: 42px;
   }
-  .main .cards {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 10px;
-    padding: 15px;
-  }
-  .main .card {
-    height: 150px;
-    padding: 10px;
-  }
-  .main .card img {
-    width: 25px;
-    padding: 4px;
-    bottom: 6px;
-    right: 6px;
-  }
+
   .search-box input {
-    font-size: 14px;
+    font-size: 16px;
+    padding: 6px;
   }
 }
 
+/* Media query for large screens */
+@media (min-width: 1025px) {
+  .main .cards {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
 
+  .main .card {
+    height: 200px;
+    padding: 15px;
+  }
 
+  .main .card img {
+    width: 35px;
+    bottom: 10px;
+    right: 10px;
+  }
 
+  .main .card p {
+    font-size: 17px;
+  }
 
+  .main .greet {
+    font-size: 56px;
+  }
+
+  .search-box input {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .main-bottom {
+    padding: 0px 20px;
+  }
+}
